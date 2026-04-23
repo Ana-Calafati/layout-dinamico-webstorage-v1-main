@@ -9,8 +9,27 @@
     <link rel="stylesheet" href="./assets/menu.css">
 </head>
 <body>
-    <div data-componente="menu"></div>
+    <div data-componente="menu">
+        <header class="cabecalho">
+    <a href="#" class="cabecalho__logo">Logo</a>
+    <nav class="menu" data-menu>
+        <button class="menu__botao" aria-label="Abrir Menu" aria-expanded="false">
+            Menu
+            <span class="menu__hamburguer"></span>
+        </button>
+
+        <ul class="menu__lista">
+            <li><a href="#" data-link="home">Home</a></li>
+            <li><a href="#" data-link="home">Sobre</a></li>
+            <li><a href="#" data-link="home">Produtos</a></li>
+            <li><a href="#" data-link="home">Portfólio</a></li>
+            <li><a href="#" data-link="home">Contato</a></li>
+        </ul>
+    </nav>
+    </header>
+    </div>
     <main data-conteudo></main>
-<script type="module" src="./js/main.js"></script>
+    <script type="module" src="../assets/menu.css"></script>
+
 </body>
 </html>
