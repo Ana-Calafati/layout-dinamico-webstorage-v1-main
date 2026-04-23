@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --primary-color-light: #f0f0f0;
+  --secondary-color-light: #ffffff;
+  --text-color-light: #333;
+  --hover-color-light: #ddd;
+  --button-bg-light: #e0e0e0;
+  --button-hover-light: #ccc;
+  --sidebar-bg-light: #ffffff;
+
+  --primary-color-dark: #1e1e1e;
+  --secondary-color-dark: #2e2e2e;
+  --text-color-dark: #f0f0f0;
+  --hover-color-dark: #555;
+  --button-bg-dark: #333;
+  --button-hover-dark: #444;
+  --sidebar-bg-dark: #2e2e2e;
+}
+
+.theme{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color-light);
+   
+}
+
+
+.theme.dark{
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-dark);
+}
+
+.sidebar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--sidebar-bg-light);
+    transition: background-color 0.3s;
+}
+
+.sidebar ul{
+    align-items: center;    
+    list-style: none;
+}
+
+.sidebar li{
+    display: block;
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+    padding: 8px 15px;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li:hover{
+    background-color: var(--hover-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a{
+    display: block;        /* Faz o link ocupar 100% da largura da sidebar */
+    padding: 10px 20px;    /* Dá um respiro interno para não ficar colado na borda */
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+.main{
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+.theme-button{
+    background-color: var(--button-bg-light);
+    font-size: medium;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+
+}
+
+.theme-button:hover{
+    background-color: var(--button-hover-light);
+}
