@@ -1,17 +1,18 @@
-<header class="cabecalho">
-    <a href="#" class="cabecalho__logo">Logo</a>
-    <nav class="menu" data-menu>
-        <button class="menu__botao" aria-label="Abrir Menu" aria-expanded="false">
-            Menu
-            <span class="menu__hamburguer"></span>
-        </button>
 
-        <ul class="menu__lista">
-            <li><a href="#" data-link="home">Home</a></li>
-            <li><a href="#" data-link="home">Sobre</a></li>
-            <li><a href="#" data-link="home">Produtos</a></li>
-            <li><a href="#" data-link="home">Portfólio</a></li>
-            <li><a href="#" data-link="home">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="cabecalho">
+        <a class="cabecalho__logo" href="#">Logo</a>
+
+        <nav class="menu" data-menu>
+            <button class="menu__botao" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu-lista" aria-expanded="false">
+                Menu
+                <span class="menu__hamburguer"></span>
+            </button>
+        
+            <ul class="menu__lista" id="menu-lista">
+                <li class="menu__item"><a href="#">Sobre</a></li>
+                <li class="menu__item"><a href="#">Produtos</a></li>
+                <li class="menu__item"><a href="#">Portfólio</a></li>
+                <li class="menu__item"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
