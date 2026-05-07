@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Fetch</title>
-    <script src="script-cep.js" defer ></script>
+    <script src="script-cep.js" defer></script>
 </head>
 <body>
+
     <h1>Consulte seu CEP</h1>
+
     <input type="text" placeholder="Digite o seu cep" id="cep">
-    <button>Clique aqui</button>
+
+    <button id="buscar">Clique aqui</button>
+
+    <script>
+        
+        // pra funcionar, tive que colocar uma função
+
+        const botao = document.getElementById('buscar');
+
+        botao.addEventListener('click', () => {
+
+            const consulta = document.getElementById('cep').value;
+
+            const url = `https://viacep.com.br/ws/${consulta}/json/`;
+
+            const consultaCep = fetch(url);
+
+            consultaCep
+            .then((response) => {
+
+                if(!response.ok){
+                    throw new Error('Erro na Requisição.')
+                }
+
+                return response.json()
+            })
+            .then((dados) => {
+
+                if(dados.erro){
+                    throw new Error('CEP inválido ou não encontrado.')
+                }
+
+                console.log(dados)
+
+            })
+            .catch((erro) => {
+
+                console.warn(erro.message)
+
+            });
+
+        });
+
+    </script>
+
 </body>
 </html>
