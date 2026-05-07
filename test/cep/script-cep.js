@@ -1,4 +1,4 @@
-const url = 'https://viacep.com.br/ws/14802452/json/';
+const url = `https://viacep.com.br/ws/${consulta}/json/`;
 // colocando o cep aqui no codigo, esta funcionando. so falta colocar isso na interface.
 
 const consulta = fetch(url);
